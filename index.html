@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title> Pagina Web Potente </title>
+	</head>
+
+	<body>
+		<!-- Le dejé el coomment!-->
+		<h1>1. Botones para hacer visajes</h1>
+		<button>Botón inútil</button>
+		<br><br>
+		<button onclick="accion_1()" id="Bt1">Botón #1</button>
+		<br><br>
+		<button onclick="accion_2()" id="Bt2">Botón #2</button>
+		<br><br>
+		<button onclick="accion_3()" id="Bt3">Botón #3</button>
+		<br><br>
+		<h2>2. Interfaz de entrada y salida de datos</h2>
+		<p>Pasanos los datos manitooo</p>
+		Primer nombre: <input type="text" name="Mandame el texto 1"id="Tx_1">
+		Segundo nombre: <input type="text" name="Mandame el texto 2"id="Tx_2">
+		<br><br>
+		Primer apellido: <input type="text" name="Mandame el texto 3"id="Tx_3">
+		Segundo apellido: <input type="text" name="Mandame el texto 4"id="Tx_4">
+		<br><br>
+		<button onclick="accion_4()"id="Bt4">Concatenar el nombre completo</button>
+		<br><br>
+		Nombres:&nbsp;<output id="Out1"></output> y Apellidos:&nbsp;<output id="Out2"></output>
+		<style type="text/css">
+			/*Comentario en css*/ 
+			body{
+				background-image: url(BgImage.jpg);
+				background-repeat: initial;
+				color: rgba(255,255,255,1.0);
+				background-blend-mode: luminosity;
+			}
+			h1{color: rgba(255, 0, 0, 1.0);}
+			h2{color: rgba(0, 255, 255, 1.0);}
+
+			#Out1{color: rgba(255, 0, 255, 1.0);}
+			#Out2{color: rgba(121, 210, 87, 1.0);}
+			#Bt4{color: rgba(255,20, 80, 1.0);}
+
+		</style>
+
+		<script type="text/javascript">
+			//Comentario en js
+
+			function accion_1()
+			{
+				alert("Funcionalidad botón 1")
+			}
+
+			function accion_2()
+			{
+				confirm("Funcionalidad botón 2")
+			}
+
+			function accion_3()
+			{
+				alert("Funcionalidad botón 3");
+				confirm("Funcionalidad 2 del Botón 3")
+			}
+
+			function accion_4()
+			{
+				var Nombres = document.getElementById("Tx_1").value+" "+
+						 	  document.getElementById("Tx_2").value+" "
+				var Apellidos=document.getElementById("Tx_3").value+" "+
+							  document.getElementById("Tx_4").value
+			  	var NombreCompleto = Nombres + Apellidos
+				alert(NombreCompleto)
+				document.getElementById("Out1").innerHTML=Nombres
+				document.getElementById("Out2").innerHTML = Apellidos
+			}
+
+
+		</script>
+
+	</body>
+
+</html>
